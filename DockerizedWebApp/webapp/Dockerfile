@@ -11,5 +11,6 @@ RUN cp -r . /var/www/webapp
 RUN cp 000-default.conf /etc/apache2/sites-available
 RUN apt install libapache2-mod-wsgi-py3 -y
 RUN a2enmod wsgi
+RUN a2enmod status
 RUN cd /etc/apache2/sites-available
 RUN a2ensite 000-default.conf
